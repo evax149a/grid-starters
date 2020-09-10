@@ -14,6 +14,8 @@
             display: grid;
             grid-gap: 10px;
             padding: 10px;
+
+            grid-template-rows: repeat(4, 1fr);
         }
 
         .item {
@@ -23,18 +25,36 @@
 
         .item-a {
             background-color: darkgoldenrod;
+
+            grid-row: span 1;
         }
 
         .item-b {
             background-color: green;
+
+            grid-row: span 2;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 45px;
         }
 
+        /*
         .item-c {
             background-color: darkred;
+            grid-row: span 1;
         }
+*/
 
         .item-d {
             background-color: darkblue;
+            grid-row: span 1;
+        }
+
+        article {
+            background-color: darkred;
+            border: 2px solid black;
+            /*            padding: 30px;*/
         }
 
         @media screen and (min-width:768px) {}
@@ -45,9 +65,17 @@
 <body>
     <main class="container">
         <div class="item item-a">A</div>
-        <div class="item item-b">B</div>
-        <div class="item item-c">C</div>
-        <div class="item item-d">D</div>
+        <div class="item item-b">
+            <article>D</article>
+            <article>D</article>
+            <article>D</article>
+            <article>D</article>
+            <article>D</article>
+            <article>D</article>
+            <article>D</article>
+            <article>D</article>
+        </div>
+        <div class="item item-d">C</div>
     </main>
 
 </body></html>
